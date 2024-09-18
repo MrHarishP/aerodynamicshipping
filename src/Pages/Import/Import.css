@@ -1,0 +1,217 @@
+/* src/LogisticsServices.css */
+
+.logistics-services {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #122649;
+  }
+  /* src/LogisticsServices.css */
+/* Adding the background image */
+
+.logistics-services {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #122649;
+  }
+  .section-title h2{
+    font-size: 1rem;
+  }
+  .image-container {
+    flex: 1;
+    min-width: 400px; /* Ensures responsiveness */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px; /* Optional: rounded corners */
+  }
+  
+  .content-container {
+    flex: 1;
+    max-width: 500px;
+    margin: 20px;
+  }
+  
+  .section-title {
+    color: #f0a31e ;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .main-title {
+    font-size: 1.7rem;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    color: whitesmoke ;
+  }
+  
+  .features-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .features-list li::before {
+    content: '⚫'; /* Bullet icon */
+    color: #f0a31e ; /* Bullet color */
+    margin-right: 8px;
+  }
+  
+  .learn-more-btn {
+    background-color: #f0a31e ;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .logistics-services {
+      flex-direction: column;
+    }
+  
+    .content-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+  
+    .main-title {
+      font-size: 1.5rem;
+    }
+  
+    .section-title {
+      font-size: 0.9rem;
+    }
+  
+    .learn-more-btn {
+      width: 100%;
+    }
+  }
+  
+  .section-title h2{
+    font-size: 1rem;
+  }
+  .image-container {
+    flex: 1;
+    min-width: 300px; /* Ensures responsiveness */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px; /* Optional: rounded corners */
+  }
+  
+  .content-container {
+    flex: 1;
+    max-width: 500px;
+    margin: 20px;
+  }
+  
+  .section-title {
+    color: #f0a31e ;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .main-title {
+    font-size: 1.7rem;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    color: whitesmoke ;
+  }
+  
+  .features-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .features-list li::before {
+    content: '⚫'; /* Bullet icon */
+    color: #f0a31e ; /* Bullet color */
+    margin-right: 8px;
+  }
+  
+  .learn-more-btn {
+    background-color: #f0a31e ;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .logistics-services {
+      flex-direction: column;
+    }
+  
+    .content-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+  
+    .main-title {
+      font-size: 1.5rem;
+    }
+  
+    .section-title {
+      font-size: 0.9rem;
+    }
+  
+    .learn-more-btn {
+      width: 100%;
+    }
+  }
+  

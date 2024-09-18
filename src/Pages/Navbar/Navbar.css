@@ -1,0 +1,72 @@
+/* Add background image to navbar */
+/* .navbar {
+    background: url('../../Components/Image/background.jpg') no-repeat center center; /* Replace with the actual path of your image */
+    /* background-size: cover; Make the background image cover the entire navbar */
+/* } */
+
+/* Ensure the navbar content is readable over the background image */
+
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar h4 {
+    color: #ffffff; /* Set the text color to white for better contrast */
+}
+
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+    color: #f0a31e; /* Change to your brand's accent color on hover */
+}
+
+/* Logo adjustments */
+.navbar-logo {
+    height: auto;
+    max-height: 40px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+/* Sticky navbar */
+.navbar-light.sticky-top {
+    top: 0;
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.7); /* Slightly transparent when sticky */
+}
+
+/* Dropdown menu styling */
+.navbar .nav-item .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark transparent dropdown background */
+    border: none;
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Make text stand out over the background image */
+.navbar .navbar-nav .nav-link {
+    position: relative;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 25px 0;
+}
+
+/* Navbar hover and active link */
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: #f0a31e; /* Change to your brand's accent color */
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+
+    /* Ensure mobile navbar background is consistent */
+    .navbar {
+        background: rgba(0, 0, 0, 0.8); /* Dark background for mobile view */
+    }
+}

@@ -1,0 +1,401 @@
+/* General Styles */
+.markets-container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #eecece;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  overflow: hidden;
+  background: #eac483;
+  /* opacity: .5; */
+}
+
+/* Adding the curved SVG background */
+.markets-container::before {
+  content: '';
+  position: absolute;
+  top: -50px; /* Adjust the positioning to match the image */
+  left: 0;
+  width: 100%;
+  height: 300px;
+  /* background: url(/src/Components/Image/); */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%230073e6" fill-opacity="1" d="M0,160L60,165.3C120,171,240,181,360,170.7C480,160,600,128,720,117.3C840,107,960,117,1080,144C1200,171,1320,213,1380,234.7L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>');
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Market Circles */
+.market {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  animation: bounce 2s ease infinite;
+}
+
+.circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: bounce 2s ease infinite alternate;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: bounce 2s ease infinite alternate;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #021931;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: bounce 2s ease infinite alternate;
+}
+
+.arrow:before {
+  content: '→';
+  color: white;
+  font-size: 12px;
+}
+
+
+
+/* Market Text */
+.market-text {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0073e6;
+  animation: bounce 2s ease infinite alternate;
+}
+
+/* Hover Effects */
+.circle:hover {
+  transform: scale(1.15);
+}
+
+.circle:hover img {
+  transform: scale(1.15);
+}
+
+.circle:hover .arrow {
+  background-color: #005bb5;
+  transform: translateY(-50%) scale(1.3);
+}
+
+.market-text:hover {
+  color: #005bb5;
+  text-decoration: underline;
+}
+
+/* Positioning Market Circles */
+.automotive {
+  top: 10%;
+  left: 15%;
+  padding: 40px;
+  animation-delay: 0s;
+}
+
+.retail {
+  top: 10%;
+  right: 15%;
+  /* padding: 40px; */
+  animation-delay: 0.2s;
+}
+
+.industrial {
+  bottom: 10%;
+  left: 15%;
+  animation-delay: 0.4s;
+  /* padding: 40px; */
+}
+
+.consumer {
+  bottom: 10%;
+  right: 15%;
+  animation-delay: 0.6s;
+}
+
+/* Center Content */
+.center-content {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: #0073e6;
+  opacity: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: bounce 2s ease infinite alternate;
+}
+
+.center-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  padding: 55px;
+  animation: bounce 2s ease infinite alternate;
+}
+
+.center-content h3 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 20px;
+  animation: bounce 2s ease infinite alternate;
+}
+
+.center-content p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  padding: 0 20px;
+  animation: bounce 2s ease infinite alternate;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .markets-container {
+    padding: 20px;
+  }
+
+  .automotive, .retail, .industrial, .consumer {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    position: static;
+    margin: 10px;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .center-content h1 {
+    font-size: 2rem;
+  }
+
+  .center-content h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .market {
+    margin-bottom: 20px;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .center-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .center-content h3 {
+    font-size: 1rem;
+  }
+
+  .center-content p {
+    font-size: 0.9rem;
+  }
+}
+/* why choose us  */
+.roadmap-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.roadmap-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-section .subtitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.roadmap-section .description {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.roadmap-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 40px;
+  position: relative;
+}
+
+.roadmap-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  max-width: 250px;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.solution-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.roadmap-item h3 {
+  font-size: 1rem;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.roadmap-item p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.connector-lines {
+  position: absolute;
+  width: 61px; /* Adjust length to your liking */
+  height: 5px;
+  background-color: #ccc;
+  top: 50%;
+  left: 91%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1024px) {
+  .roadmap-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .connector-line {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .roadmap-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .roadmap-item {
+    max-width: 100%;
+  }
+}
+/* industry we serve  */
+.values-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #eac483;
+}
+
+.values-section h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.values-subtitle {
+  margin-bottom: 30px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.values-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.value-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.value-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.value-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: left;
+}
+
+.value-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.value-content h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: white;
+}
+
+.value-content p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}

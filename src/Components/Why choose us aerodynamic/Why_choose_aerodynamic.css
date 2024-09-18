@@ -1,0 +1,79 @@
+/* OurServices.css */
+
+.services-section {
+    background: url('/src/Components/Image/service_bg4.jpg') no-repeat center center/cover; /* Set your background image */
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .services-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .service-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1); /* Initial background color */
+    color: #fff; /* Initial text color */
+    cursor: pointer;
+  }
+  
+  .service-item:hover {
+    background-color: rgba(91, 240, 160, 0.8); /* Change to your desired hover color */
+    color: #fff; /* Change text color on hover */
+  }
+  
+  .service-icon {
+    font-size: 2.5rem; /* Adjust icon size */
+    margin-bottom: 10px;
+  }
+  
+  .service-name {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .service-description {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .read-more-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-item:hover .read-more-arrow {
+    transform: translateX(5px); /* Arrow moves on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .services-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service-item {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
