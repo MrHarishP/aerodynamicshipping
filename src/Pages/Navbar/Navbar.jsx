@@ -8,9 +8,18 @@ function Navbar() {
             {/* Replace the text with an image */}
             <img src={logo} alt="Logistica Logo" className="navbar-logo" />
         </a>
-        <button type="button" className="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span className="navbar-toggler-icon"></span>
-        </button>
+        <button
+  className="navbar-toggler me-4"
+  type="button"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarCollapse"
+  aria-controls="navbarCollapse"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+>
+  <span className="navbar-toggler-icon"></span>
+</button>
+
         <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto p-4 p-lg-0">
                 {/* <a href="/" className="nav-item nav-link">Home</a> */}
