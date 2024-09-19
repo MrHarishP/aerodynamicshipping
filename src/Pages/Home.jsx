@@ -264,9 +264,9 @@ const Home = () => {
                 <option value="" disabled>
                   Select A Freight
                 </option>
-                <option value="1">Freight 1</option>
-                <option value="2">Freight 2</option>
-                <option value="3">Freight 3</option>
+                <option value="1">Courier Services</option>
+                <option value="2">Air Freight</option>
+                <option value="3">Road Freight</option>
               </select>
               </div>
               <div className="col-12">
