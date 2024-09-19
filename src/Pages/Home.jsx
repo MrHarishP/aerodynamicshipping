@@ -1,14 +1,18 @@
 
-import React from 'react'
+import React,{useState} from 'react'
 import Footer from '../Components/Footer'
 import Navbar from './Navbar/Navbar'
 import Faq from '../Components/FAQ/Faq'
-import Reliability_and_Timeliness from '../Components/Image/Reliability and Timeliness.jpg'
+// import Reliability_and_Timeliness from '../Components/Image/Reliability and Timeliness.jpg'
 import Service from '../Components/Services/Service'
 import landing_page from '../Components/Image/landing_image.jpg'
 import Why_choose_aerodynamic from '../Components/Why choose us aerodynamic/Why_choose_aerodynamic'
 const Home = () => {
-  
+  const [selectedFreight, setSelectedFreight] = useState('Select A Freight');
+
+  const handleSelectChange = (e) => {
+    setSelectedFreight(e.target.value);
+  };
   
   return (
     <>
@@ -251,12 +255,19 @@ const Home = () => {
                 <input type="text" className="form-control border-0" placeholder="Your Mobile" style={{ height: '55px' }} />
               </div>
               <div className="col-12 col-sm-6">
-                <select className="form-select border-0" style={{ height: '55px' }}>
-                  <option value="" disabled selected>Select A Freight</option> {/* Added disabled and empty value for better UX */}
-                  <option value="1">Freight 1</option>
-                  <option value="2">Freight 2</option>
-                  <option value="3">Freight 3</option>
-                </select>
+              <select
+                className="form-select border-0"
+                style={{ height: '55px' }}
+                value={selectedFreight} // Set the selected value
+                onChange={handleSelectChange} // Update state on change
+              >
+                <option value="" disabled>
+                  Select A Freight
+                </option>
+                <option value="1">Freight 1</option>
+                <option value="2">Freight 2</option>
+                <option value="3">Freight 3</option>
+              </select>
               </div>
               <div className="col-12">
                 <textarea className="form-control border-0" placeholder="Special Note" rows="4"></textarea> {/* Added rows for better appearance */}
