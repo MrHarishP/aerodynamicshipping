@@ -60,9 +60,9 @@ const Home = () => {
               <p className="fs-5 fw-medium text-white mb-4 pb-2">
               At Aero Dynamic Shipping, we simplify and enhance your logistics experience!
               </p>
-              <a href="#" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">
+              {/* <a href="#" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">
                 Read More
-              </a>
+              </a> */}
               {/* <a href="about us " className="btn btn-secondary py-md-3 px-md-5 animated slideInRight">
                 Free Quote
               </a> */}
