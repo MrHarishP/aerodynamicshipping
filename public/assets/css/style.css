@@ -80,7 +80,13 @@
     vertical-align: middle;
     margin-left: 8px;
 }
-
+.navbar-logo {
+    height: auto;
+    max-height: 40px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+}
 .navbar-light .navbar-nav .nav-link {
     position: relative;
     margin-right: 30px;

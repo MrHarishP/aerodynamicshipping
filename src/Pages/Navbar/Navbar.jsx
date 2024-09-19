@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../Components/Image/logo.png'
+// import './Navbar.css'
 function Navbar() {
   return (
     // <!-- Navbar Start -->
@@ -9,8 +10,8 @@ function Navbar() {
             <img src={logo} alt="Logistica Logo" className="navbar-logo" />
         </a>
         <button
-  className="navbar-toggler me-4"
   type="button"
+  className="navbar-toggler me-4"
   data-bs-toggle="collapse"
   data-bs-target="#navbarCollapse"
   aria-controls="navbarCollapse"
@@ -23,9 +24,9 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto p-4 p-lg-0">
                 {/* <a href="/" className="nav-item nav-link">Home</a> */}
-                <a href="Import" className="nav-item nav-link active">Import</a>
+                <a href="Import" className="nav-item nav-link ">Import</a>
                 <a href="Export" className="nav-item nav-link">Export</a>
-                <a href="About" className="nav-item nav-link active">About</a>
+                <a href="About" className="nav-item nav-link ">About</a>
                 <a href="Contact" className="nav-item nav-link">Contact</a>
             </div>
             <h4 className="m-0 pe-lg-5 d-none d-lg-block">

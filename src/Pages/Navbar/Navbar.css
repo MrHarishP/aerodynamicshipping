@@ -9,7 +9,7 @@
 .navbar .nav-link,
 .navbar .navbar-brand,
 .navbar h4 {
-    color: #ffffff; /* Set the text color to white for better contrast */
+    color: #d84f4f; /* Set the text color to white for better contrast */
 }
 
 .navbar .nav-link:hover,
@@ -47,7 +47,7 @@
 /* Make text stand out over the background image */
 .navbar .navbar-nav .nav-link {
     position: relative;
-    color: #fff;
+    color: #d83737;
     font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
