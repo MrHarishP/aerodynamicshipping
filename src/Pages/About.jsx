@@ -124,9 +124,9 @@ function About() {
               <i className="fa fa-globe text-primary fa-3x flex-shrink-0"></i>
               <div className="ms-4">
                 <h5>Worldwide Service</h5>
-                <p className="mb-0">
+                {/* <p className="mb-0">
                   Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo justo magna erat amet
-                </p>
+                </p> */}
               </div>
             </div>
 
@@ -134,9 +134,9 @@ function About() {
               <i className="fa fa-shipping-fast text-primary fa-3x flex-shrink-0"></i>
               <div className="ms-4">
                 <h5>On Time Delivery</h5>
-                <p className="mb-0">
+                {/* <p className="mb-0">
                   Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo justo magna erat amet
-                </p>
+                </p> */}
               </div>
             </div>
 
@@ -144,9 +144,9 @@ function About() {
               <i className="fa fa-headphones text-primary fa-3x flex-shrink-0"></i>
               <div className="ms-4">
                 <h5>24/7 Telephone Support</h5>
-                <p className="mb-0">
+                {/* <p className="mb-0">
                   Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo justo magna erat amet
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
