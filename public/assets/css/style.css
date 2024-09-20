@@ -80,6 +80,10 @@
     vertical-align: middle;
     margin-left: 8px;
 }
+.nav-item .active-link {
+    color: #f0a31e; /* Your brand's accent color */
+    font-weight: bold;
+  }
 .navbar-logo {
     height: auto;
     max-height: 40px;

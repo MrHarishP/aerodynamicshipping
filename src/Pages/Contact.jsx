@@ -1,8 +1,49 @@
-import React from 'react'
+import React, {useState,useRef} from 'react'
+import emailjs from '@emailjs/browser';
 import Navbar from './Navbar/Navbar'
 import Footer from '../Components/Footer'
 import contact_image from '../Components/Image/Customs Clearance.jpg'
 function Contact() {
+  const form = useRef();
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    company: '',
+    email: '',
+    category: ''
+  });
+
+  emailjs.init('ltgaiHK8mpW8QttCw');
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    emailjs
+    .sendForm('service_m5tmddl', 'template_z8hyhga', form.current, 'ltgaiHK8mpW8QttCw')
+    .then(
+      (result) => {
+        console.log('SUCCESS!', result.text);
+        alert("Form Submit successfully")
+        setFormData({
+          name: '',
+          phone: '',
+          company: '',
+          email: '',
+          category: ''
+        });
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      }
+    );
+
+  };
   return (
     <>
     <Navbar/>
@@ -27,28 +68,48 @@ function Contact() {
           <div className="col-md-6 contact-form wow fadeIn" data-wow-delay="0.1s">
             <h6 className="text-secondary text-uppercase">Get In Touch</h6>
             <h1 className="mb-4">Contact For Any Query</h1>
-            <p className="mb-4">
+            {/* <p className="mb-4">
               The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code, and you're done.{' '}
               <a href="https://htmlcodex.com/contact-form">Download Now</a>.
-            </p>
+            </p> */}
             <div className="bg-light p-4">
-              <form>
+            <form ref={form} className="contact-form" onSubmit={handleSubmit}>
                 <div className="row g-3">
                   <div className="col-md-6">
                     <div className="form-floating">
-                      <input type="text" className="form-control" id="name" placeholder="Your Name" />
-                      <label htmlFor="name">Your Name</label>
+                    {/* <form ref={form} onSubmit={sendEmail}> */}
+                      <input type="text" 
+                      className="form-control" 
+                      id="name" 
+                      placeholder="Your Name" 
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      />
+                      <label>Your Name</label>
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="form-floating">
-                      <input type="email" className="form-control" id="email" placeholder="Your Email" />
+                      <input type="email" 
+                      className="form-control" 
+                      id="email" 
+                      placeholder="Your Email" 
+                      value={formData.name}
+                      onChange={handleChange}
+                      required/>
                       <label htmlFor="email">Your Email</label>
                     </div>
                   </div>
                   <div className="col-12">
                     <div className="form-floating">
-                      <input type="text" className="form-control" id="subject" placeholder="Subject" />
+                      <input type="text" 
+                      className="form-control" 
+                      id="subject" 
+                      placeholder="Subject" 
+                      value={formData.name}
+                      onChange={handleChange}
+                      required/>
                       <label htmlFor="subject">Subject</label>
                     </div>
                   </div>
@@ -72,6 +133,7 @@ function Contact() {
               </form>
             </div>
           </div>
+          
           <div className="col-md-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s">
             <div className="position-relative h-100">
             <img
