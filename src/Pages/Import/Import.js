@@ -1,5 +1,6 @@
 // src/ImportLogistics.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Import.css'; // Importing the CSS for styling
 import Navbar from '../Navbar/Navbar';
 import Footer from '../../Components/Footer';
@@ -30,7 +31,9 @@ Simplify international trade with our comprehensive import logistics services.
           <li>	Import Compliance Consulting: Guidance on trade laws and documentation.</li>
           <li> Insurance and Risk Management: Tailored cargo insurance options.</li>
         </ul>
-        <button className="learn-more-btn">Learn More</button>
+        <Link to = '/Contact'>
+        <button  className="learn-more-btn">Get in touch </button>
+        </Link>
       </div>
     </div>
     <Why_choose_us/>
