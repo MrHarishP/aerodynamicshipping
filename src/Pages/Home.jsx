@@ -1,13 +1,57 @@
 
-import React,{useState} from 'react'
+import React,{useState , useRef} from 'react'
 import Footer from '../Components/Footer'
 import Navbar from './Navbar/Navbar'
 import Faq from '../Components/FAQ/Faq'
+import emailjs from '@emailjs/browser';
 // import Reliability_and_Timeliness from '../Components/Image/Reliability and Timeliness.jpg'
 import Service from '../Components/Services/Service'
 import landing_page from '../Components/Image/landing_image.jpg'
 import Why_choose_aerodynamic from '../Components/Why choose us aerodynamic/Why_choose_aerodynamic'
 const Home = () => {
+  const form = useRef();
+  
+  // State to hold form data
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    freight: '',
+    message: ''
+  });
+
+  // Handle input changes
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value, // Update the state with input value
+    });
+  };
+
+  // Handle form submit
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    // Send form data using emailjs
+    emailjs
+      .sendForm('service_g7j4352', 'template_08w2l6i', form.current, 'FzEIxAhpYWKLu_uYT')
+      .then(
+        (result) => {
+          console.log('SUCCESS!', result.text);
+          alert('Form Submitted Successfully');
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            freight: '',
+            message: ''
+          });
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
+  };
   const [selectedFreight, setSelectedFreight] = useState('Select A Freight');
 
   const handleSelectChange = (e) => {
@@ -60,9 +104,9 @@ const Home = () => {
               <p className="fs-5 fw-medium text-white mb-4 pb-2">
               At Aero Dynamic Shipping, we simplify and enhance your logistics experience!
               </p>
-              {/* <a href="#" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">
-                Read More
-              </a> */}
+              <a href="/Contact" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">
+                Get In Touch
+              </a>
               {/* <a href="about us " className="btn btn-secondary py-md-3 px-md-5 animated slideInRight">
                 Free Quote
               </a> */}
@@ -225,63 +269,102 @@ const Home = () => {
 
 {/* Quote Start */}
 <div className="container-xxl py-5">
-  <div className="container py-5">
-    <div className="row g-5 align-items-center">
-      <div className="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-        <h6 className="text-secondary text-uppercase mb-3">Get A Quote</h6>
-        <h1 className="mb-5">Request A Free Quote!</h1> {/* Fixed typo from "Qoute" to "Quote" */}
-        <p className="mb-5">
-        Request a free quote and explore our affordable rates with no strings attached. Let us show you how we can optimize your logistics and reduce your costs.
-        </p>
-        <div className="d-flex align-items-center">
-        <i className="fa fa-headphones text-primary fa-3x flex-shrink-0"></i>
-          <div className="ps-4">
-            <h6>Call for any query!</h6>
-            <h3 className="text-primary m-0">+91 9958654792</h3>
+      <div className="container py-5">
+        <div className="row g-5 align-items-center">
+          <div className="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h6 className="text-secondary text-uppercase mb-3">Get A Quote</h6>
+            <h1 className="mb-5">Request A Free Quote!</h1>
+            <p className="mb-5">
+              Request a free quote and explore our affordable rates with no strings attached. Let us show you how we can optimize your logistics and reduce your costs.
+            </p>
+            <div className="d-flex align-items-center">
+              <i className="fa fa-headphones text-primary fa-3x flex-shrink-0"></i>
+              <div className="ps-4">
+                <h6>Call for any query!</h6>
+                <h3 className="text-primary m-0">+91 9958654792</h3>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-7">
+            <div className="bg-light text-center p-5 wow fadeIn" data-wow-delay="0.5s">
+              <form ref={form} onSubmit={handleSubmit}>
+                <div className="row g-3">
+                  <div className="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      className="form-control border-0"
+                      placeholder="Your Name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      style={{ height: '55px' }}
+                      required
+                    />
+                  </div>
+                  <div className="col-12 col-sm-6">
+                    <input
+                      type="email"
+                      className="form-control border-0"
+                      placeholder="Your Email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      style={{ height: '55px' }}
+                      required
+                    />
+                  </div>
+                  <div className="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      className="form-control border-0"
+                      placeholder="Your Mobile"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      style={{ height: '55px' }}
+                      required
+                    />
+                  </div>
+                  <div className="col-12 col-sm-6">
+                    <select
+                      className="form-select border-0"
+                      name="freight"
+                      value={formData.freight}
+                      onChange={handleChange}
+                      style={{ height: '55px' }}
+                      required
+                    >
+                      <option value="" disabled>
+                        Select A Freight
+                      </option>
+                      <option value="Courier Services">Courier Services</option>
+                      <option value="Air Freight">Air Freight</option>
+                      <option value="Road Freight">Road Freight</option>
+                    </select>
+                  </div>
+                  <div className="col-12">
+                    <textarea
+                      className="form-control border-0"
+                      placeholder="Special Note"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows="4"
+                      required
+                    ></textarea>
+                  </div>
+                  <div className="col-12">
+                    <button className="btn btn-primary w-100 py-3" type="submit">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      <div className="col-lg-7">
-        <div className="bg-light text-center p-5 wow fadeIn" data-wow-delay="0.5s">
-          <form>
-            <div className="row g-3">
-              <div className="col-12 col-sm-6">
-                <input type="text" className="form-control border-0" placeholder="Your Name" style={{ height: '55px' }} />
-              </div>
-              <div className="col-12 col-sm-6">
-                <input type="email" className="form-control border-0" placeholder="Your Email" style={{ height: '55px' }} />
-              </div>
-              <div className="col-12 col-sm-6">
-                <input type="text" className="form-control border-0" placeholder="Your Mobile" style={{ height: '55px' }} />
-              </div>
-              <div className="col-12 col-sm-6">
-              <select
-                className="form-select border-0"
-                style={{ height: '55px' }}
-                value={selectedFreight} // Set the selected value
-                onChange={handleSelectChange} // Update state on change
-              >
-                <option value="" disabled>
-                  Select A Freight
-                </option>
-                <option value="1">Courier Services</option>
-                <option value="2">Air Freight</option>
-                <option value="3">Road Freight</option>
-              </select>
-              </div>
-              <div className="col-12">
-                <textarea className="form-control border-0" placeholder="Special Note" rows="4"></textarea> {/* Added rows for better appearance */}
-              </div>
-              <div className="col-12">
-                <button className="btn btn-primary w-100 py-3" type="submit">Submit</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
 
 {/* Quote End */}
 
