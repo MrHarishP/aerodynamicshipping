@@ -24,9 +24,9 @@ const Footer = () => {
           </div>
           <div className="col-lg-3 col-md-6">
             <h4 className="text-light mb-4">Services</h4>
-            <a className="btn btn-link" >Air Freight</a>
-            <a className="btn btn-link" >Sea Freight</a>
-            <a className="btn btn-link" >Road Freight</a>
+            <a href="/" className="btn btn-link" >Home</a>
+            <a href="/Export"className="btn btn-link" >Export</a>
+            <a href="/Import"className="btn btn-link" >Import</a>
             {/* <a className="btn btn-link" href="#">Logistic Solutions</a>
             <a className="btn btn-link" href="#">Industry solutions</a> */}
           </div>

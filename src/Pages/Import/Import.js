@@ -12,7 +12,7 @@ const Import = () => {
    <div className='image_bg'>
    <Navbar/>
    <div className="logistics-services">
-      <div className="image-container">
+      <div className="image-containe">
         <img
           src={import_image} // Replace with your image URL
           alt="Cargo Ship"
