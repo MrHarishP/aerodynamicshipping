@@ -74,39 +74,35 @@ const FAQ = () => {
   return (
     
     <div className="why-choose-us-container">
-    {/* Left Panel: List of Items */}
-    <div className="left-panel">
-      <h2>FREQUENTLY ASKED QUESTIONS (FAQs)</h2>
-      <ul className="items-list">
-        {items.map((item, index) => (
-          <li
-            key={index}
-            className={`item ${activeIndex === index ? 'active' : ''}`} // Conditional class to highlight the active item
-            onClick={() => handleItemClick(index)} // Set the active item on click
-          >
-            <div className="item-content">
-              {item.title}
-              {/* Connecting line indicator */}
-              {activeIndex === index && <div className="connector-line"></div>}
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
+  {/* Left Panel: List of Items */}
+  <div className="left-panel">
+    <h2>FREQUENTLY ASKED QUESTIONS (FAQs)</h2>
+    <ul className="items-list">
+      {items.map((item, index) => (
+        <li key={index} className={`item ${activeIndex === index ? 'active' : ''}`} onClick={() => handleItemClick(index)}>
+          <div className="item-content">
+            {item.title}
+            {activeIndex === index && <div className="connector-line"></div>}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
 
-    {/* Right Panel: Display of the Selected Item's Details */}
-    <div className="right-panel">
-      <div className="content">
-        <h3>{items[activeIndex].title}</h3> {/* Display the title of the selected item */}
-        <p>{items[activeIndex].description}</p> {/* Display the description of the selected item */}
-        <img
-          src={items[activeIndex].image}
-          alt={items[activeIndex].title}
-          className="content-image"
-        /> {/* Display the image of the selected item */}
-      </div>
+  {/* Right Panel: Display of the Selected Item's Details */}
+  <div className="right-panel">
+    <div className="content">
+      <h3>{items[activeIndex].title}</h3>
+      <p>{items[activeIndex].description}</p>
+      <img
+        src={items[activeIndex].image}
+        alt={items[activeIndex].title}
+        className="content-image"
+      />
     </div>
   </div>
+</div>
+
   );
 };
 

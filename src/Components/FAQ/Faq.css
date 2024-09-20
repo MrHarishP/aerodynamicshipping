@@ -92,6 +92,7 @@
 }
 
 /* Responsive Design Adjustments */
+
 @media (max-width: 768px) {
   .why-choose-us-container {
     flex-direction: column;
