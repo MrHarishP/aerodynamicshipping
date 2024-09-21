@@ -71,9 +71,7 @@
 }
 
 /*** Navbar ***/
-/* .navbar{
-    position: fixed;
-} */
+
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
@@ -129,6 +127,15 @@
     top: -100px;
     transition: .5s;
 }
+/* Sticky Top Modification */
+.navbar-light.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1030; /* Ensure it's above other content */
+    background-color: white;
+    transition: top 0.3s ease-in-out;
+}
+
 
 @media (min-width: 992px) {
     .navbar-light .navbar-nav .nav-link::before {
