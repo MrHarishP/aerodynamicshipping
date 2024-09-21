@@ -33,7 +33,7 @@
   }
   
   .service-item:hover {
-    background-color: rgba(91, 240, 160, 0.8); /* Change to your desired hover color */
+    background-color: orange; /* Change to your desired hover color */
     color: #fff; /* Change text color on hover */
   }
   
