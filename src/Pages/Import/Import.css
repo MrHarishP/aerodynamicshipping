@@ -28,7 +28,7 @@
   }
   
   .image-containe img {
-    width: 100%;
+    width: 85%;
     height: 50%;
     border-radius: 10px; /* Optional: rounded corners */
   }
@@ -102,6 +102,7 @@
     .content-container {
       text-align: center;
       margin: 20px 0;
+      align-self: baseline;
     }
   
     .main-title {
@@ -126,7 +127,7 @@
   }
   
   .image-container img {
-    width: 100%;
+    width: 85%;
     height: 50%;
     border-radius: 10px; /* Optional: rounded corners */
   }
@@ -211,7 +212,7 @@
     }
   
     .learn-more-btn {
-      width: 100%;
+      width: 65%;
     }
   }
   

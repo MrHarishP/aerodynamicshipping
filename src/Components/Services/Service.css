@@ -7,11 +7,11 @@
   }
   
   .logistics-title {
-    font-size: 8rem;
+    font-size: 5rem;
     margin-bottom: 20px;
     color: #333;
   }
-  
+ 
   /* Grid layout for steps */
   .logistics-steps {
     display: grid;
@@ -72,5 +72,6 @@
     .logistics-steps {
       grid-template-columns: 1fr;
     }
+   
   }
   
