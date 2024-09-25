@@ -14,7 +14,7 @@ const Footer = () => {
             <h4 className="text-light mb-4">Address</h4>
             {/* <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p> */}
             <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>+91 9315699345</p>
-            <p className="mb-2"><i className="fa fa-envelope me-3"></i>info@example.com</p>
+            <p className="mb-2"><i className="fa fa-envelope me-3"></i>info@aerodynamicshipping.com</p>
             {/* <div className="d-flex pt-2">
               <a className="btn btn-outline-light btn-social" href="#"><i className="fab fa-twitter"></i></a>
               <a className="btn btn-outline-light btn-social" href="#"><i className="fab fa-facebook-f"></i></a>
