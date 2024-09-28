@@ -281,7 +281,7 @@ const Home = () => {
               <i className="fa fa-headphones text-primary fa-3x flex-shrink-0"></i>
               <div className="ps-4">
                 <h6>Call for any query!</h6>
-                <h3 className="text-primary m-0">+91 9958654792</h3>
+                <h3 className="text-primary m-0">+91 9315699345</h3>
               </div>
             </div>
           </div>
